@@ -1,25 +1,49 @@
 
-# Project XYZ
+# Credit Card Fraud Detection
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+<img src="images/cover.jpg" alt="cover" width="175" style="float:left; margin-right:20px;" />
+<p>
+Credit Card Fraud Detection is a project that analyzes a highly imbalanced credit card transaction dataset to detect fraudulent activities. The data contains 284,807 transactions made by European cardholders in September 2013, including 492 fraud cases (0.172%).
 
+All features (V1–V28) are results of a PCA transformation, except for Time (seconds elapsed since the first transaction) and Amount (transaction value). The target variable Class indicates whether a transaction is fraudulent (1) or legitimate (0).
 
+The project focuses on exploratory data analysis (EDA), data preprocessing, and fraud detection modeling using various machine learning techniques. 
+</p>
+<div style="clear:both;"></div>
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
-
+[Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
 
 ## Business Requirements
-* Describe your business requirements
+The main business requirement of this project is to develop a reliable data-driven system for detecting fraudulent credit card transactions, aiming to minimize financial losses and protect customers from unauthorized charges. The goal is to analyze transaction patterns and identify key indicators that distinguish fraudulent from legitimate activities using historical data. The project seeks to answer critical business questions such as how fraud can be detected early, which features have the most influence, and how to reduce false positives that inconvenience genuine customers. Success will be measured through metrics like high recall, precision, and Area Under the Precision-Recall Curve (AUPRC), ensuring both effective detection and operational efficiency. The expected outcome is an accurate fraud detection model supported by clear insights and visualizations that can guide better decision-making and improve transaction monitoring systems.
 
 
 ## Hypothesis and how to validate?
 * List here your project hypothesis(es) and how you envision validating it (them) 
 
 ## Project Plan
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+**High-Level Steps for the Analysis**
+- Explore the credit card transactions dataset to understand its structure, features, and class imbalance.
+- Perform exploratory data analysis (EDA) to identify trends, correlations, and differences between fraudulent and legitimate transactions.
+- Conduct data preprocessing, including scaling numeric features (Amount, Time) and addressing class imbalance using resampling techniques such as undersampling, oversampling, or SMOTE.
+- Split the dataset into training and testing sets to ensure unbiased model evaluation.
+- Apply machine learning models such as Logistic Regression, Random Forest, and Gradient Boosting to classify transactions.
+- Evaluate model performance using Precision, Recall, F1-score, and Area Under the Precision-Recall Curve (AUPRC).
+- Visualize results and generate insights to interpret model behavior and support business decision-making.
+
+**Data Management**
+- Maintain data integrity throughout all stages of the workflow through consistent preprocessing and validation steps.
+- Keep a clean and reproducible pipeline by documenting data transformations and versioning scripts.
+- Use appropriate scaling and normalization methods to enhance model performance.
+- Handle class imbalance with sampling techniques to prevent bias toward the majority class.
+- Store processed datasets securely and track model iterations for transparency and reproducibility.
+
+**Research Methodology Justification**
+- Use supervised machine learning algorithms suitable for binary classification and imbalanced datasets.
+- Focus on Precision-Recall metrics instead of accuracy to better evaluate model effectiveness on rare events.
+- Work directly with PCA-transformed features due to confidentiality restrictions and the dataset’s preprocessed nature.
+- Prioritize interpretable models and clear visualizations to provide actionable business insights.
+- Follow standard data science workflow practices to ensure consistency, scalability, and clarity throughout the analysis.
 
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
@@ -69,6 +93,8 @@
 
 
 ## Credits 
+
+- Cover image downloaded from https://www.vectorstock.com/royalty-free-vector/fraud-detection-icon-guard-against-bank-card-vector-50566859
 
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
